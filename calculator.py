@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Initialize the session state for the calculator expression if it doesn't exist.
+# Initialize the session state for the calculator expression.
 if 'expression' not in st.session_state:
     st.session_state.expression = ""
 
@@ -37,5 +37,3 @@ for row in buttons:
     for idx, char in enumerate(row):
         if cols[idx].button(char):
             update_expression(char)
-            # Rerun the script to update the displayed expression.
-            st.experimental_rerun()
